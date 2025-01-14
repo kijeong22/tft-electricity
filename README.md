@@ -9,14 +9,22 @@ The model has been applied to forecast **building-level electricity consumption*
 ## Repository Structure
 ```
 .
-├── data/                     # Sample data files or instructions for dataset access
-├── models/                   # TFT model implementation
-├── utils/                    # Utility functions for preprocessing and evaluation
-├── experiments/              # Scripts for training and evaluation
-├── outputs/                  # Saved model checkpoints and results
-├── README.md                 # This readme file
-├── requirements.txt          # Python dependencies
-└── LICENSE                   # License file
+├── src/                     # Source code
+│   ├── config/              # Configuration files
+│   │   └── config.json      # Model and training configuration
+│   ├── dataset/             # Dataset files
+│   │   ├── building_info.csv # Metadata about buildings
+│   │   ├── train.csv        # Training data
+│   │   └── test.csv         # Testing data
+│   ├── layer.py             # Custom model layers
+│   ├── main.py              # Main script for training and evaluation
+│   ├── metric.py            # Metrics for evaluation
+│   ├── model.py             # TFT model implementation
+│   ├── preprocessing.py     # Data preprocessing scripts
+│   └── util.py              # Utility functions
+├── .gitignore               # Git ignore file
+├── README.md                # This readme file
+├── requirements.txt         # Python dependencies
 ```
 
 ## Getting Started
@@ -39,7 +47,7 @@ The model has been applied to forecast **building-level electricity consumption*
 ### Training the Model
 Run the training script:
 ```bash
-python src/main.py
+python ./src/main.py
 ```
 
 
