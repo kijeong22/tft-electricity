@@ -1,0 +1,29 @@
+{
+    "data":{
+        "encoder_len":168,
+        "decoder_len":24
+    },
+
+    "train":{
+        "epochs":100,
+        "learning_rate":1e-3,
+        "batch_size":64,
+        "patient":10,
+        "save_path":"./best_model/"
+    },
+
+    "model":{
+        "sequence_len":192,
+        "tau":24,
+        "static_cate_list":[11],
+        "static_conti_num":2,
+        "past_cate_list":[32, 7, 24, 2], 
+        "past_conti_num":5,
+        "future_cate_list":[32, 7, 24, 2],
+        "d_model":32,
+        "dropout":0.1,
+        "num_heads":4,
+        "quantiles":[0.1,0.5,0.9],
+        "device":"cuda:0"
+    }
+}
